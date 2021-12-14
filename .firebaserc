@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-trial-29347": {
+      "hosting": {
+        "todo-list": [
+          "angular-trial-29347"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-trial-29347"
+  }
+}
