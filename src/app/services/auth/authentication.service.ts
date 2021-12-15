@@ -1,15 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Auth } from "@angular/fire/auth";
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor(public auth: Auth) {}
+  constructor(public router: Router, public http: HttpClient) {
+  }
 
-  signUp(email: string, password: string) {
-    return createUserWithEmailAndPassword(this.auth, email, password)
+  signUp(emailBody: string, passwordBody: string) {
+    return this.http.post(environment.authUrl + '/api/register', {
+      email: emailBody,
+      password: passwordBody,
+    })
+  }
+
+  logIn(emailBody: string, passwordBody: string) {
+    return this.http.post(environment.authUrl + '/api/login', {
+      email: emailBody,
+      password: passwordBody,
+    })
   }
 }
