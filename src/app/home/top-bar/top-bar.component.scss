@@ -1,3 +1,42 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.tableFixHead          { overflow: auto; height: 100px; width: 240px; }
+.tableFixHead thead th { position: sticky; top: 0; z-index: 1; }
+.tableFixHead tbody th { position: sticky; left: 0; }
+
+li { cursor: pointer; }
+@import url('https://fonts.googleapis.com/css?family=Rubik:700&display=swap');
+
+$bg: #fff;
+$text: #382b22;
+$light-pink: #fff0f0;
+$pink: #ffe9e9;
+$dark-pink: #f9c4d2;
+$pink-border: #b18597;
+$pink-shadow: #ffe3e2;
+
+* {
+  box-sizing: border-box;
+  &::before, &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  background: $bg;
+}
+
+.button-search {
+  margin-left: 5px;
+  margin-right: 15px;
+}

@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   authUrl: "https://reqres.in",
+  contentUrl: "https://jsonplaceholder.typicode.com"
 };
 
 /*

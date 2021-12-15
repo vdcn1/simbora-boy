@@ -5,20 +5,22 @@
         <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
       </a>
 
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+      <ul class="nav col-12 col-lg-4 me-lg-auto mb-2 justify-content-center mb-md-0">
         <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
         <li><a href="#" class="nav-link px-2 link-dark">Inventory</a></li>
         <li><a href="#" class="nav-link px-2 link-dark">Customers</a></li>
         <li><a href="#" class="nav-link px-2 link-dark">Products</a></li>
+        <li><a (click)="onLogout()" class="nav-link px-2 link-dark">Sign out</a></li>
       </ul>
 
-      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-      </form>
+      <div class="nav col-12 col-lg-2 me-lg-1 mb-2 mb-md-0">
+        <input [(ngModel)]="searchString" type="search" class="form-control col" placeholder="Search..." aria-label="Search">
+        <button type="button" class="btn btn-secondary button-search" (click)="onSearch()">🔍</button>
+      </div>
 
-      <div class="dropdown text-end">
+      <div class="dropdown text-end ml-1">
         <button class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" aria-expanded="false">
-          <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          <img src="https://github.com/vdcn1.png" alt="mdo" width="48" height="48" class="rounded-circle">
         </button>
         <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
           <li><a class="dropdown-item" href="#">New project...</a></li>

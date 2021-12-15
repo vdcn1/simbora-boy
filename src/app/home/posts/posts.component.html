@@ -1,1 +1,13 @@
-<p>posts works!</p>
+<div *ngFor="let post of posts" class="container mt-5">
+  <a href="https://codepen.io/jaynewey" class="text-dark text-decoration-none">
+    <div class="post-about mb-4">
+      <h2>{{post.title}}</h2>
+      <div>
+        <span class="post-tag">Angular trial</span>
+      </div>
+      <div class="mb-1 text-muted">1st June 2020</div>
+      <p>{{post.body}}</p>
+      <small class="text-muted">Last updated: 1st June 2020</small>
+    </div>
+  </a>
+</div>
